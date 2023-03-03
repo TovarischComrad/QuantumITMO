@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-// Чтение вектора
+// Р§С‚РµРЅРёРµ РІРµРєС‚РѕСЂР°
 float* read_vector(int n) {
 	float* v = new float[n];
 	for (int i = 0; i < n; i++) {
@@ -11,7 +11,7 @@ float* read_vector(int n) {
 	return v;
 }
 
-// Вывод вектора
+// Р’С‹РІРѕРґ РІРµРєС‚РѕСЂР°
 void print_vector(float* v, int n) {
 	for (int i = 0; i < n; i++) {
 		cout << v[i] << " ";
@@ -19,7 +19,7 @@ void print_vector(float* v, int n) {
 	cout << endl;
 }
 
-// Кронекеровское произведение векторов
+// РљСЂРѕРЅРµРєРµСЂРѕРІСЃРєРѕРµ РїСЂРѕРёР·РІРµРґРµРЅРёРµ РІРµРєС‚РѕСЂРѕРІ
 float* tensor_vector(float* v1, int n, float* v2, int m) {
 	float* res = new float[n * m];
 	for (int i = 0; i < n; i++) {
@@ -30,7 +30,7 @@ float* tensor_vector(float* v1, int n, float* v2, int m) {
 	return res;
 }
 
-// Чтение матрицы
+// Р§С‚РµРЅРёРµ РјР°С‚СЂРёС†С‹
 float** read_matrix(int n) {
 	float** arr = new float* [n];
 	for (int i = 0; i < n; i++) {
@@ -44,7 +44,7 @@ float** read_matrix(int n) {
 	return arr;
 }
 
-// Вывод матрицы
+// Р’С‹РІРѕРґ РјР°С‚СЂРёС†С‹
 void print_matrix(float** m, int n) {
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
@@ -54,7 +54,7 @@ void print_matrix(float** m, int n) {
 	}
 }
 
-// Кронекеровское произведение матриц
+// РљСЂРѕРЅРµРєРµСЂРѕРІСЃРєРѕРµ РїСЂРѕРёР·РІРµРґРµРЅРёРµ РјР°С‚СЂРёС†
 float** tensor_matrix(float** m1, int n, float** m2, int m) {
 	int size = n * m;
 	float** res = new float* [size];
