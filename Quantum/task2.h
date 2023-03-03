@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 
-// Скалярное произведение векторов
+// РЎРєР°Р»СЏСЂРЅРѕРµ РїСЂРѕРёР·РІРµРґРµРЅРёРµ РІРµРєС‚РѕСЂРѕРІ
 float dot_product(float* v1, float* v2, int n) {
 	float p = 0.0;
 	for (int i = 0; i < n; i++) {
@@ -12,7 +12,7 @@ float dot_product(float* v1, float* v2, int n) {
 	return p;
 }
 
-// Умножение матрицы на вектор
+// РЈРјРЅРѕР¶РµРЅРёРµ РјР°С‚СЂРёС†С‹ РЅР° РІРµРєС‚РѕСЂ
 float* product(float** m, float* v, int n) {
 	float* res = new float[n];
 	for (int i = 0; i < n; i++) {
@@ -21,7 +21,7 @@ float* product(float** m, float* v, int n) {
 	return res;
 }
 
-// Возведение в степень
+// Р’РѕР·РІРµРґРµРЅРёРµ РІ СЃС‚РµРїРµРЅСЊ
 int int_pow(int x, int n) {
 	int p = 1;
 	for (int i = 0; i < n; i++) {
@@ -30,13 +30,13 @@ int int_pow(int x, int n) {
 	return p;
 }
 
-// Подходит ли состояние для измерения
+// РџРѕРґС…РѕРґРёС‚ Р»Рё СЃРѕСЃС‚РѕСЏРЅРёРµ РґР»СЏ РёР·РјРµСЂРµРЅРёСЏ
 bool correct(int mask, int number) {
 	int res = mask & number;
 	return res == number;
 }
 
-// Перевод двоичного кода в целое число
+// РџРµСЂРµРІРѕРґ РґРІРѕРёС‡РЅРѕРіРѕ РєРѕРґР° РІ С†РµР»РѕРµ С‡РёСЃР»Рѕ
 int bin_to_int(string mask) {
 	int s = 0;
 	int p = 1;
@@ -48,7 +48,7 @@ int bin_to_int(string mask) {
 	return s;
 }
 
-// Подсчёт кол-ва нулей
+// РџРѕРґСЃС‡С‘С‚ РєРѕР»-РІР° РЅСѓР»РµР№
 int zeros(string mask) {
 	int p = 0;
 	for (int i = 0; i < mask.size(); i++) {
@@ -57,7 +57,7 @@ int zeros(string mask) {
 	return p;
 }
 
-// Длина вектора
+// Р”Р»РёРЅР° РІРµРєС‚РѕСЂР°
 float length(float* v, int n) {
 	float s = 0.0;
 	for (int i = 0; i < n; i++) {
@@ -67,7 +67,7 @@ float length(float* v, int n) {
 	return s;
 }
 
-// Нормирование вектора
+// РќРѕСЂРјРёСЂРѕРІР°РЅРёРµ РІРµРєС‚РѕСЂР°
 float* norm(float* v, int n) {
 	float l = length(v, n);
 	float* res = new float[n];
@@ -77,7 +77,7 @@ float* norm(float* v, int n) {
 	return res;
 }
 
-// Оператор измерения
+// РћРїРµСЂР°С‚РѕСЂ РёР·РјРµСЂРµРЅРёСЏ
 float* measure(float* v, int n, string mask) {
 	int msk = bin_to_int(mask);
 	int p = zeros(mask);
